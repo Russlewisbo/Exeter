@@ -77,7 +77,7 @@ Figure created by R. Lewis using biorender.com
 <br>
 
 | **A**ntifungal       | Preclinical efficacy target | Clinical efficacy target                                                                         |
-|----------------------|-----------------------------|--------------------------------------------------------------------------------------------------|
+|------------------|------------------|----------------------|
 | Amphotericin B (AMB) | C~max~/MIC; AUC~0-24~/MIC   | Not established                                                                                  |
 | Liposomal AMB        | AUC~0-24~/MIC               | Not established                                                                                  |
 | Flucytosine (5FC)    | Time \> MIC                 | \>20-45% Time \>MIC                                                                              |
@@ -203,7 +203,7 @@ Vd- volume of distribution; Cl- clearance
 <br>
 
 | Reference          | Fluconazole <br> (mg/L)         | Itraconazole <br>(mg/L) | Voriconazole <br>(mg/L) | Posaconazole<br>(mg/L) | Isavuconazole<br>(mg/L) |
-|--------------------|---------------------------------|-------------------------|-------------------------|------------------------|-------------------------|
+|------------|------------|------------|------------|------------|------------|
 | [@Gómez-López2020] | Not routine                     | 1-4 (HPLC)              | 1-6                     | \>1                    | Not routine             |
 | [@Ashbee2014]      | Not routine                     | 0.5-1 (HPLC)            | 1-6                     | \>1                    | Not routine             |
 | [@Scodavolpe2014]  | AUC/MIC \> 25; <br>C~min~ 10-15 | \>1-2 (HPLC)            | 1-4                     | 0.5-1.5                | Not routine             |
