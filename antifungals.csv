@@ -1,0 +1,21 @@
+﻿start,content,group,id
+1955-01-01,nystatin,Polyene,1
+1959-01-01,amphotericin B-deoxycholate,Polyene,2
+1960-01-01,griseofulvin,Other,3
+1967-01-01,flucytosine,Other,4
+1971-01-01,miconazole,Azole,5
+1976-01-01,ketoconazole,Azole,6
+1990-01-01,fluconazole,Azole,7
+1992-01-01,itraconazole,Azole,8
+1991-01-01,terbinafine,Other,9
+1995-01-01,amphotericin B lipid complex,Polyene,10
+1996-01-01,liposomal amphotericin B,Polyene,11
+1997-01-01,amphotericin B colloidal dispersion,Polyene,12
+1999-01-01,caspofungin,Echinocandin,13
+2002-01-01,voriconazole,Azole,14
+2005-01-01,micafungin,Echinocandin,15
+2006-01-01,anidulafungin,Echinocandin,16
+2006-01-01,posaconazole,Azole,17
+2015-01-01,isavuconazole,Azole,18
+2014-01-01,"posaconazole IV, tablet",Azole,19
+2021-01-01,ibrexafungerp,Echinocandin,20

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Exeter_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Exeter_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Exeter_files/libs/quarto-html/popper.min.js"></script>
+<script src="Exeter_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Exeter_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Exeter_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Exeter_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.37">
+
+  <title>exeter</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Exeter_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Exeter_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <link rel="stylesheet" href="Exeter_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="Exeter_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Exeter_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Exeter_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Exeter_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Exeter_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Exeter_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="principles-and-complexity-of-antifungal-therapy" class="slide level2" data-background-image="aspergillus.png">
+<h2>Principles and Complexity of Antifungal Therapy</h2>
+<p><br> <br></p>
+<p><br></p>
+<p><br></p>
+<p><br> <br></p>
+<p><left><strong>Russell E. Lewis, Pharm.D., FCCP</strong> <br> Associate Professor of Medicine, Infectious Diseases <br> Department of Medical and Surgical Sciences <br> Infectious Diseases Unit- IRCCS S. Orsola University Hospitals <br> Alma Mater Studiorum Università di Bologna <br> Bologna, Italy</left></p>
+</section>
+<section id="disclosures" class="slide level2">
+<h2>Disclosures</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><strong>Research funding:</strong> Merck &amp; Co Inc., Gilead Sciences</li>
+<li class="fragment"><strong>Speaking:</strong> Avir, Gilead</li>
+<li class="fragment"><strong>Consultancy:</strong> F2G, Scynexis, Gilead Sciences, Cidara Therapeutics</li>
+</ul>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<p><br></p>
+<ul>
+<li class="fragment">Identify common pharmacological factors that affect treatment success</li>
+<li class="fragment">Discuss how uncertainty in antifungal drug dosing can be addressed through PK/PD principles</li>
+<li class="fragment">Recognise common toxicity problems with antifungals and the general management approach</li>
+</ul>
+</section>
+<section id="antifungal-timeline" class="slide level2 smaller">
+<h2>Antifungal timeline</h2>
+<p><br></p>
+
+<img data-src="timeline2.png" class="r-stretch quarto-figure-left"></section>
+<section id="current-antifungal-targets" class="slide level2 smaller">
+<h2>Current antifungal targets</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="DTR.png" width="800"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Figure created by R. Lewis using biorender.com</p>
+</div></aside></section>
+<section id="what-factors-drive-the-success-of-antifungal-therapy" class="slide level2 smaller">
+<h2>What factors drive the success of antifungal therapy?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="the-pkpd-index" class="slide level2 smaller">
+<h2>The PK/PD index</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD_combined.png" width="1200"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="antifungal-pkpd-targets-associated-with-efficacy" class="slide level2 smaller">
+<h2>Antifungal PK/PD targets associated with efficacy</h2>
+<p><br></p>
+<table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 35%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>A</strong>ntifungal</th>
+<th>Preclinical efficacy target</th>
+<th>Clinical efficacy target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Amphotericin B (AMB)</td>
+<td>C<sub>max</sub>/MIC; AUC<sub>0-24</sub>/MIC</td>
+<td>Not established</td>
+</tr>
+<tr class="even">
+<td>Liposomal AMB</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td>Not established</td>
+</tr>
+<tr class="odd">
+<td>Flucytosine (5FC)</td>
+<td>Time &gt; MIC</td>
+<td>&gt;20-45% Time &gt;MIC</td>
+</tr>
+<tr class="even">
+<td>Fluconazole</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td><em>f</em>AUC<sub>0-24</sub>/MIC &lt; 25-100; <br>C<sub>min</sub> 10-15 mg/L</td>
+</tr>
+<tr class="odd">
+<td>Itraconazole</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td>C<sub>min</sub> &gt; 0.5 mg/L (prophylaxis); <br> C<sub>min</sub>&gt; 1 mg/L (treatment)</td>
+</tr>
+<tr class="even">
+<td>Voriconazole</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td><em>f</em>AUC<sub>0-24</sub>/MIC 25-50; <br> C<sub>min</sub> &gt; 1 mg/L or C<sub>min</sub>/MIC 2-5 mg/L</td>
+</tr>
+<tr class="odd">
+<td>Posaconazole</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td><em>f</em>AUC<sub>0-24</sub>/MIC 25-50; <br> prophylaxis C<sub>min</sub> &gt; 0.5-0.7 mg/L; <br> treatment C<sub>min</sub> &gt; 1 mg/L</td>
+</tr>
+<tr class="even">
+<td>Isavuconazole</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td><em>f</em>AUC<sub>0-24</sub>/MIC 25-50</td>
+</tr>
+<tr class="odd">
+<td>Echinocandins</td>
+<td>AUC<sub>0-24</sub>/MIC</td>
+<td>AUC/MIC &gt; 3000</td>
+</tr>
+</tbody>
+</table>
+
+<aside><div>
+<p><em>f- free (non-protein bound) drug</em></p>
+<p><span class="citation" data-cites="Lewis2021">(<a href="#/ref-Lewis2021" role="doc-biblioref" onclick="return false;">Russell E. Lewis and Andes 2021</a>)</span></p>
+</div></aside></section>
+<section id="what-factors-drive-the-success-of-antifungal-therapy-1" class="slide level2">
+<h2>What factors drive the success of antifungal therapy?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="what-factors-drive-the-success-of-antifungal-therapy-2" class="slide level2">
+<h2>What factors drive the success of antifungal therapy?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD2.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="intrinsic-activity-of-antifungals" class="slide level2">
+<h2>Intrinsic activity of antifungals</h2>
+
+<img data-src="antifungal_spectrum%20(1).png" class="r-stretch quarto-figure-center"><p><br></p>
+</section>
+<section id="acquired-antifungal-resistance" class="slide level2">
+<h2>Acquired antifungal resistance</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD3.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="acquired-resistance-mechanisms-and-detection" class="slide level2">
+<h2>Acquired resistance mechanisms and detection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="acquired_reisstance.png" width="800"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Figure: Created by R. Lewis using biorender.com</p>
+</div></aside></section>
+<section id="antifungal-susceptibility-testing--where-do-we-stand" class="slide level2" data-background-image="MIC_microbroth_dilution.png">
+<h2>Antifungal susceptibility testing- Where do we stand?</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p><strong>Reference methods for yeasts and moulds have been developed by:</strong></p>
+<ul>
+<li class="fragment"><p>European Committee on Antimicrobial Susceptibility Testing (EUCAST)</p></li>
+<li class="fragment"><p>Clinical Laboratory Standards Institute (CLSI)</p>
+<ul>
+<li class="fragment">Fungal species and drug-specific susceptibility breakpoints for <em>Candida</em> and <em>Aspergillus</em> spp.</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><p><strong>Some commercial phenotypic and molecular tests are approved for detection of common antifungal resistance mechanisms</strong></p></li>
+<li class="fragment"><p><strong>Need for “in house” antifungal susceptibility testing will increase with the introduction of new antifungals</strong></p>
+<p><br></p></li>
+</ul>
+
+<aside><div>
+<p><span class="citation" data-cites="Wiederhold2021">(<a href="#/ref-Wiederhold2021" role="doc-biblioref" onclick="return false;">Wiederhold 2021</a>)</span></p>
+</div></aside></section>
+<section id="pharmacokinetic-factors" class="slide level2">
+<h2>Pharmacokinetic factors</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD_PK1.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="antifungal-tissue-distribution-studies" class="slide level2">
+<h2>Antifungal tissue distribution studies</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="af_distribution.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="felton2014b">(<a href="#/ref-felton2014b" role="doc-biblioref" onclick="return false;">Felton, Troke, and Hope 2014</a>)</span></p>
+</div></aside></section>
+<section id="pharmacokinetic-factors-1" class="slide level2">
+<h2>Pharmacokinetic factors</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD_PK2.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="antifungal-pharmacokinetics-in-the-critically-ill" class="slide level2">
+<h2>Antifungal pharmacokinetics in the critically-ill</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="critical%20illness.png" width="800"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="roberts2014e">(<a href="#/ref-roberts2014e" role="doc-biblioref" onclick="return false;">Roberts et al. 2014</a>)</span></p>
+<p>Vd- volume of distribution; Cl- clearance</p>
+</div></aside></section>
+<section id="pharmacokinetic-complexity-of-voriconazole" class="slide level2">
+<h2>Pharmacokinetic complexity of voriconazole</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="voripk.png"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="trifilio2014">(<a href="#/ref-trifilio2014" role="doc-biblioref" onclick="return false;">Trifilio and Mehta 2014</a>)</span>]</p>
+</div></aside></section>
+<section id="triazole-therapeutic-drug-monitoring-during-antifungal-treatment" class="slide level2 smaller">
+<h2>Triazole therapeutic drug monitoring during <br> antifungal treatment</h2>
+<p><br></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Reference</th>
+<th>Fluconazole <br> (mg/L)</th>
+<th>Itraconazole <br>(mg/L)</th>
+<th>Voriconazole <br>(mg/L)</th>
+<th>Posaconazole<br>(mg/L)</th>
+<th>Isavuconazole<br>(mg/L)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="citation" data-cites="Gómez-López2020">(<a href="#/ref-Gómez-López2020" role="doc-biblioref" onclick="return false;">Gómez-López 2020</a>)</span></td>
+<td>Not routine</td>
+<td>1-4 (HPLC)</td>
+<td>1-6</td>
+<td>&gt;1</td>
+<td>Not routine</td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="Ashbee2014">(<a href="#/ref-Ashbee2014" role="doc-biblioref" onclick="return false;">Ashbee et al. 2013</a>)</span></td>
+<td>Not routine</td>
+<td>0.5-1 (HPLC)</td>
+<td>1-6</td>
+<td>&gt;1</td>
+<td>Not routine</td>
+</tr>
+<tr class="odd">
+<td><span class="citation" data-cites="Scodavolpe2014">(<a href="#/ref-Scodavolpe2014" role="doc-biblioref" onclick="return false;">Scodavolpe et al. 2014</a>)</span></td>
+<td>AUC/MIC &gt; 25; <br>C<sub>min</sub> 10-15</td>
+<td>&gt;1-2 (HPLC)</td>
+<td>1-4</td>
+<td>0.5-1.5</td>
+<td>Not routine</td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="Chau2014">(<a href="#/ref-Chau2014" role="doc-biblioref" onclick="return false;">M. M. Chau et al. 2014</a>)</span></td>
+<td>Not routine</td>
+<td>0.5-1 (HPLC)</td>
+<td>1-6</td>
+<td>&gt;1</td>
+<td>Not routine</td>
+</tr>
+<tr class="odd">
+<td><span class="citation" data-cites="Abdul-Aziz2020">(<a href="#/ref-Abdul-Aziz2020" role="doc-biblioref" onclick="return false;">Abdul-Aziz et al. 2020</a>)</span></td>
+<td>Not routine</td>
+<td>&gt;0.5-1 (HPLC)</td>
+<td>2-6</td>
+<td>&gt;1</td>
+<td>Not routine</td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="Chau2021">(<a href="#/ref-Chau2021" role="doc-biblioref" onclick="return false;">Maggie M. Chau et al. 2021</a>)</span></td>
+<td>Not routine; <br>C<sub>min</sub> &gt;11</td>
+<td>1-4 (HPLC)</td>
+<td>1-5.5</td>
+<td>&gt;1</td>
+<td>Not routine</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="toxicity" class="slide level2">
+<h2>Toxicity</h2>
+
+<img data-src="PKPD_drug%20interactions.png" width="650" class="r-stretch quarto-figure-center"></section>
+<section id="common-antifungal-toxicities" class="slide level2">
+<h2>Common antifungal toxicities</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="toxicities.png"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="Lewis2011805 johnson2021">(<a href="#/ref-Lewis2011805" role="doc-biblioref" onclick="return false;">R. E. Lewis 2011</a>; <a href="#/ref-johnson2021" role="doc-biblioref" onclick="return false;">Johnson 2021</a>)</span></p>
+</div></aside></section>
+<section id="antifungal-toxicities-acute-vs.-chronic" class="slide level2 smaller">
+<h2>Antifungal toxicities: Acute vs.&nbsp;Chronic</h2>
+<p><br></p>
+
+<img data-src="strategy.png" width="300" class="r-stretch quarto-figure-center"></section>
+<section id="triazole-drug-interactions" class="slide level2">
+<h2>Triazole drug interactions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="DI.png"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="andes2016 bruggemann2009a">(<a href="#/ref-andes2016" role="doc-biblioref" onclick="return false;">Andes et al. 2016</a>; <a href="#/ref-bruggemann2009a" role="doc-biblioref" onclick="return false;">Brüggemann et al. 2009</a>)</span></p>
+</div></aside></section>
+<section id="what-factors-drive-the-success-of-antifungal-therapy-3" class="slide level2 smaller">
+<h2>What factors drive the success of antifungal therapy?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="PKPD.png" width="650"></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012">(<a href="#/ref-theuretzbacher2012" role="doc-biblioref" onclick="return false;">Theuretzbacher 2012</a>)</span></p>
+</div></aside></section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<p><br></p>
+<ul>
+<li class="fragment">Pharmacokinetic and pharmacodynamic factors need to be considered when selecting antifungal therapy</li>
+<li class="fragment">MIC testing and therapeutic drug monitoring (TDM) are important tools used to address pharmacodynamic and pharmacokinetic variability of antifungals.</li>
+<li class="fragment">Knowledge of PK/PD can be used to individualise patient drug selection and dosing to improve the probability of a positive microbiological/clinical outcome</li>
+<li class="fragment">Antifungal toxicities and drug interactions are common, and should be anticipated and managed individually depending on the treatment scenario and risks (e.g., acute vs.&nbsp;chronic infections)</li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<p><br></p>
+<div class="footer footer-default">
+
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Abdul-Aziz2020" class="csl-entry" role="doc-biblioentry">
+Abdul-Aziz, Mohd H., Jan-Willem C. Alffenaar, Matteo Bassetti, Hendrik Bracht, George Dimopoulos, Deborah Marriott, Michael N. Neely, et al. 2020. <span>“Antimicrobial Therapeutic Drug Monitoring in Critically Ill Adult Patients: A Position Paper<span>#</span>.”</span> <em>Intensive Care Medicine</em> 46 (6): 1127–53. <a href="https://doi.org/10.1007/s00134-020-06050-1">https://doi.org/10.1007/s00134-020-06050-1</a>.
+</div>
+<div id="ref-andes2016" class="csl-entry" role="doc-biblioentry">
+Andes, David, Nkechi Azie, Hongbo Yang, Rachel Harrington, Caroline Kelley, Ruo-Ding Tan, Eric Q Wu, et al. 2016. <span>“Drug-<span>Drug Interaction Associated</span> with <span>Mold-Active Triazoles</span> Among <span>Hospitalized Patients</span>.”</span> <em>Antimicrobial Agents and Chemotherapy</em> 60 (6): 3398–3406. <a href="https://doi.org/10.1128/AAC.00054-16">https://doi.org/10.1128/AAC.00054-16</a>.
+</div>
+<div id="ref-Ashbee2014" class="csl-entry" role="doc-biblioentry">
+Ashbee, H. R., R. A. Barnes, E. M. Johnson, M. D. Richardson, R. Gorton, and W. W. Hope. 2013. <span>“Therapeutic Drug Monitoring (TDM) of Antifungal Agents: Guidelines from the British Society for Medical Mycology.”</span> <em>Journal of Antimicrobial Chemotherapy</em> 69 (5): 1162–76. <a href="https://doi.org/10.1093/jac/dkt508">https://doi.org/10.1093/jac/dkt508</a>.
+</div>
+<div id="ref-bruggemann2009a" class="csl-entry" role="doc-biblioentry">
+Brüggemann, Roger J. M., Jan-Willem C. Alffenaar, Nicole M. A. Blijlevens, Eliane M. Billaud, Jos G. W. Kosterink, Paul E. Verweij, David M. Burger, and Louis D. Saravolatz. 2009. <span>“Clinical <span>Relevance</span> of the <span>Pharmacokinetic Interactions</span> of <span>Azole Antifungal Drugs</span> with <span>Other Coadministered Agents</span>.”</span> <em>Clinical Infectious Diseases</em> 48 (10): 1441–58. <a href="https://doi.org/10.1086/598327">https://doi.org/10.1086/598327</a>.
+</div>
+<div id="ref-Chau2014" class="csl-entry" role="doc-biblioentry">
+Chau, M. M., D. C. M. Kong, S. J. van Hal, K. Urbancic, J. A. Trubiano, M. Cassumbhoy, J. Wilkes, et al. 2014. <span>“Consensus Guidelines for Optimising Antifungal Drug Delivery and Monitoring to Avoid Toxicity and Improve Outcomes in Patients with Haematological Malignancy, 2014.”</span> <em>Internal Medicine Journal</em> 44 (12b): 1364–88. <a href="https://doi.org/10.1111/imj.12600">https://doi.org/10.1111/imj.12600</a>.
+</div>
+<div id="ref-Chau2021" class="csl-entry" role="doc-biblioentry">
+Chau, Maggie M., Kathryn Daveson, Jan-Willem C. Alffenaar, Amanda Gwee, Su Ann Ho, Deborah J. E. Marriott, Jason A. Trubiano, et al. 2021. <span>“Consensus Guidelines for Optimising Antifungal Drug Delivery and Monitoring to Avoid Toxicity and Improve Outcomes in Patients with Haematological Malignancy and Haemopoietic Stem Cell Transplant Recipients, 2021.”</span> <em>Internal Medicine Journal</em> 51 (S7): 37–66. <a href="https://doi.org/10.1111/imj.15587">https://doi.org/10.1111/imj.15587</a>.
+</div>
+<div id="ref-felton2014b" class="csl-entry" role="doc-biblioentry">
+Felton, Timothy, Peter F. Troke, and William W. Hope. 2014. <span>“Tissue Penetration of Antifungal Agents.”</span> <em>Clinical Microbiology Reviews</em> 27 (1): 68–88. <a href="https://doi.org/10.1128/CMR.00046-13">https://doi.org/10.1128/CMR.00046-13</a>.
+</div>
+<div id="ref-Gómez-López2020" class="csl-entry" role="doc-biblioentry">
+Gómez-López, A. 2020. <span>“Antifungal Therapeutic Drug Monitoring: Focus on Drugs Without a Clear Recommendation.”</span> <em>Clinical Microbiology and Infection</em> 26 (11): 1481–87. <a href="https://doi.org/10.1016/j.cmi.2020.05.037">https://doi.org/10.1016/j.cmi.2020.05.037</a>.
+</div>
+<div id="ref-johnson2021" class="csl-entry" role="doc-biblioentry">
+Johnson, Melissa D. 2021. <span>“Antifungals in <span>Clinical Use</span> and the <span>Pipeline</span>.”</span> <em>Infectious Disease Clinics of North America</em>, Fungal <span>Infections</span>, 35 (2): 341–71. <a href="https://doi.org/10.1016/j.idc.2021.03.005">https://doi.org/10.1016/j.idc.2021.03.005</a>.
+</div>
+<div id="ref-Lewis2011805" class="csl-entry" role="doc-biblioentry">
+Lewis, R. E. 2011. <span>“Current Concepts in Antifungal Pharmacology.”</span> <em>Mayo Clinic Proceedings</em> 86 (8): 805–17. <a href="https://doi.org/10.4065/mcp.2011.0247">https://doi.org/10.4065/mcp.2011.0247</a>.
+</div>
+<div id="ref-Lewis2021" class="csl-entry" role="doc-biblioentry">
+Lewis, Russell E, and David R Andes. 2021. <span>“Managing Uncertainty in Antifungal Dosing: Antibiograms, Therapeutic Drug Monitoring and Drug-Drug Interactions.”</span> <em>Current Opinion in Infectious Diseases</em> 34 (4): 288–96. <a href="https://doi.org/10.1097/QCO.0000000000000740">https://doi.org/10.1097/QCO.0000000000000740</a>.
+</div>
+<div id="ref-roberts2014e" class="csl-entry" role="doc-biblioentry">
+Roberts, Jason A, Mohd H Abdul-Aziz, Jeffrey Lipman, Johan W Mouton, Alexander A Vinks, Timothy W Felton, William W Hope, et al. 2014. <span>“Individualised Antibiotic Dosing for Patients Who Are Critically Ill: Challenges and Potential Solutions.”</span> <em>The Lancet Infectious Diseases</em> 14 (6): 498–509. <a href="https://doi.org/10.1016/S1473-3099(14)70036-2">https://doi.org/10.1016/S1473-3099(14)70036-2</a>.
+</div>
+<div id="ref-Scodavolpe2014" class="csl-entry" role="doc-biblioentry">
+Scodavolpe, Simon, Sylvie Quaranta, Bruno Lacarelle, and Caroline Solas. 2014. <span>“Triazole Antifungal Agents: Practice Guidelines of Therapeutic Drug Monitoring and Perspectives in Treatment Optimization.”</span> <em>Annales de Biologie Clinique</em> 72 (4): 391–404. <a href="https://doi.org/10.1684/abc.2014.0968">https://doi.org/10.1684/abc.2014.0968</a>.
+</div>
+<div id="ref-theuretzbacher2012" class="csl-entry" role="doc-biblioentry">
+Theuretzbacher, Ursula. 2012. <span>“Pharmacokinetic and Pharmacodynamic Issues for Antimicrobial Therapy in Patients with Cancer.”</span> <em>Clinical Infectious Diseases</em> 54 (12): 1785–92. <a href="https://doi.org/10.1093/cid/cis210">https://doi.org/10.1093/cid/cis210</a>.
+</div>
+<div id="ref-trifilio2014" class="csl-entry" role="doc-biblioentry">
+Trifilio, S, and J Mehta. 2014. <span>“Antimicrobial Prophylaxis in Hematopoietic Stem Cell Transplantation Recipients: 10 Years After.”</span> <em>Transplant Infectious Disease: An Official Journal of the Transplantation Society</em> 16 (4): 548–55. <a href="https://doi.org/10.1111/tid.12237">https://doi.org/10.1111/tid.12237</a>.
+</div>
+<div id="ref-Wiederhold2021" class="csl-entry" role="doc-biblioentry">
+Wiederhold, Nathan P. 2021. <span>“Antifungal Susceptibility Testing: A Primer for Clinicians.”</span> <em>Open Forum Infectious Diseases</em> 8 (11). <a href="https://doi.org/10.1093/ofid/ofab444">https://doi.org/10.1093/ofid/ofab444</a>.
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Exeter_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Exeter_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Exeter_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Exeter_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'multiplex': {"secret":"16601374524844453185","id":"614fae99c794ba71","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        setTimeout(function() {
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          let href = ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    });
+    </script>
+    
+
+</body></html>

@@ -1,0 +1,261 @@
+---
+format:
+  revealjs:
+    touch: true
+    controls: true
+    transition: fade
+    transition-speed: fast
+    scrollable: true
+    slide-number: false
+    incremental: true
+    multiplex: true
+    chalkboard: true
+    theme: [default, custom.scss]
+bibliography: references.bib
+---
+
+## Principles and Complexity of Antifungal Therapy {background-image="aspergillus.png"}
+
+<br> <br>
+
+<br>
+
+<br>
+
+<br> <br>
+
+<left>**Russell E. Lewis, Pharm.D., FCCP** <br> Associate Professor of Medicine, Infectious Diseases <br> Department of Medical and Surgical Sciences <br> Infectious Diseases Unit- IRCCS S. Orsola University Hospitals <br> Alma Mater Studiorum Università di Bologna <br> Bologna, Italy</left>
+
+## Disclosures
+
+<br>
+
+-   **Research funding:** Merck & Co Inc., Gilead Sciences
+-   **Speaking:** Avir, Gilead
+-   **Consultancy:** F2G, Scynexis, Gilead Sciences, Cidara Therapeutics
+
+## Objectives
+
+<br>
+
+-   Identify common pharmacological factors that affect treatment success
+-   Discuss how uncertainty in antifungal drug dosing can be addressed through PK/PD principles
+-   Recognise common toxicity problems with antifungals and the general management approach
+
+## Antifungal timeline {.smaller}
+
+<br>
+
+![](timeline2.png){fig-align="left"}
+
+## Current antifungal targets {.smaller}
+
+![](DTR.png){fig-align="center" width="800"}
+
+::: aside
+Figure created by R. Lewis using biorender.com
+:::
+
+## What factors drive the success of antifungal therapy? {.smaller}
+
+![](PKPD.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## The PK/PD index {.smaller}
+
+![](PKPD_combined.png){fig-align="center" width="1200"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Antifungal PK/PD targets associated with efficacy {.smaller}
+
+<br>
+
+| **A**ntifungal       | Preclinical efficacy target | Clinical efficacy target                                                                         |
+|----------------------|-----------------------------|--------------------------------------------------------------------------------------------------|
+| Amphotericin B (AMB) | C~max~/MIC; AUC~0-24~/MIC   | Not established                                                                                  |
+| Liposomal AMB        | AUC~0-24~/MIC               | Not established                                                                                  |
+| Flucytosine (5FC)    | Time \> MIC                 | \>20-45% Time \>MIC                                                                              |
+| Fluconazole          | AUC~0-24~/MIC               | *f*AUC~0-24~/MIC \< 25-100; <br>C~min~ 10-15 mg/L                                                |
+| Itraconazole         | AUC~0-24~/MIC               | C~min~ \> 0.5 mg/L (prophylaxis); <br> C~min~\> 1 mg/L (treatment)                               |
+| Voriconazole         | AUC~0-24~/MIC               | *f*AUC~0-24~/MIC 25-50; <br> C~min~ \> 1 mg/L or C~min~/MIC 2-5 mg/L                             |
+| Posaconazole         | AUC~0-24~/MIC               | *f*AUC~0-24~/MIC 25-50; <br> prophylaxis C~min~ \> 0.5-0.7 mg/L; <br> treatment C~min~ \> 1 mg/L |
+| Isavuconazole        | AUC~0-24~/MIC               | *f*AUC~0-24~/MIC 25-50                                                                           |
+| Echinocandins        | AUC~0-24~/MIC               | AUC/MIC \> 3000                                                                                  |
+
+::: aside
+*f- free (non-protein bound) drug*
+
+[@Lewis2021]
+:::
+
+## What factors drive the success of antifungal therapy?
+
+![](PKPD.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## What factors drive the success of antifungal therapy?
+
+![](PKPD2.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Intrinsic activity of antifungals
+
+![](antifungal_spectrum%20(1).png){fig-align="center"}
+
+<br>
+
+## Acquired antifungal resistance
+
+![](PKPD3.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Acquired resistance mechanisms and detection
+
+![](acquired_reisstance.png){fig-align="center" width="800"}
+
+::: aside
+Figure: Created by R. Lewis using biorender.com
+:::
+
+## Antifungal susceptibility testing- Where do we stand? {background-image="MIC_microbroth_dilution.png"}
+
+<br>
+
+-   **Reference methods for yeasts and moulds have been developed by:**
+
+    -   European Committee on Antimicrobial Susceptibility Testing (EUCAST)
+
+    -   Clinical Laboratory Standards Institute (CLSI)
+
+        -   Fungal species and drug-specific susceptibility breakpoints for *Candida* and *Aspergillus* spp.
+
+-   **Some commercial phenotypic and molecular tests are approved for detection of common antifungal resistance mechanisms**
+
+-   **Need for "in house" antifungal susceptibility testing will increase with the introduction of new antifungals**
+
+    <br>
+
+::: aside
+[@Wiederhold2021]
+:::
+
+## Pharmacokinetic factors
+
+![](PKPD_PK1.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Antifungal tissue distribution studies
+
+![](af_distribution.png){fig-align="center" width="650"}
+
+::: aside
+[@felton2014b]
+:::
+
+## Pharmacokinetic factors
+
+![](PKPD_PK2.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Antifungal pharmacokinetics in the critically-ill
+
+![](critical%20illness.png){fig-align="center" width="800"}
+
+::: aside
+[@roberts2014e]
+
+Vd- volume of distribution; Cl- clearance
+:::
+
+## Pharmacokinetic complexity of voriconazole
+
+<br>
+
+![](voripk.png){fig-align="center"}
+
+::: aside
+[@trifilio2014]\]
+:::
+
+## Triazole therapeutic drug monitoring during <br> antifungal treatment {.smaller}
+
+<br>
+
+| Reference          | Fluconazole <br> (mg/L)         | Itraconazole <br>(mg/L) | Voriconazole <br>(mg/L) | Posaconazole<br>(mg/L) | Isavuconazole<br>(mg/L) |
+|--------------------|---------------------------------|-------------------------|-------------------------|------------------------|-------------------------|
+| [@Gómez-López2020] | Not routine                     | 1-4 (HPLC)              | 1-6                     | \>1                    | Not routine             |
+| [@Ashbee2014]      | Not routine                     | 0.5-1 (HPLC)            | 1-6                     | \>1                    | Not routine             |
+| [@Scodavolpe2014]  | AUC/MIC \> 25; <br>C~min~ 10-15 | \>1-2 (HPLC)            | 1-4                     | 0.5-1.5                | Not routine             |
+| [@Chau2014]        | Not routine                     | 0.5-1 (HPLC)            | 1-6                     | \>1                    | Not routine             |
+| [@Abdul-Aziz2020]  | Not routine                     | \>0.5-1 (HPLC)          | 2-6                     | \>1                    | Not routine             |
+| [@Chau2021]        | Not routine; <br>C~min~ \>11    | 1-4 (HPLC)              | 1-5.5                   | \>1                    | Not routine             |
+
+## Toxicity
+
+![](PKPD_drug%20interactions.png){fig-align="center" width="650"}
+
+## Common antifungal toxicities
+
+<br>
+
+![](toxicities.png){fig-align="center"}
+
+::: aside
+[@Lewis2011805; @johnson2021]
+:::
+
+## Antifungal toxicities: Acute vs. Chronic {.smaller}
+
+<br>
+
+![](strategy.png){fig-align="center" width="300"}
+
+## Triazole drug interactions
+
+![](DI.png){fig-align="center"}
+
+::: aside
+[@andes2016; @bruggemann2009a]
+:::
+
+## What factors drive the success of antifungal therapy? {.smaller}
+
+![](PKPD.png){fig-align="center" width="650"}
+
+::: aside
+[@theuretzbacher2012]
+:::
+
+## Summary
+
+<br>
+
+-   Pharmacokinetic and pharmacodynamic factors need to be considered when selecting antifungal therapy
+-   MIC testing and therapeutic drug monitoring (TDM) are important tools used to address pharmacodynamic and pharmacokinetic variability of antifungals.
+-   Knowledge of PK/PD can be used to individualise patient drug selection and dosing to improve the probability of a positive microbiological/clinical outcome
+-   Antifungal toxicities and drug interactions are common, and should be anticipated and managed individually depending on the treatment scenario and risks (e.g., acute vs. chronic infections)
+
+## References
+
+<br>
